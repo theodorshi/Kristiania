@@ -1,0 +1,113 @@
+body {
+    background-color: rgb(248, 243, 242);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-p {
+    font-size: 28px;
+}
+
+.header-logo {
+    width: 100%;
+}
+nav {
+    width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    justify-content: space-evenly;
+}
+
+.grid-12-column {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 12px;
+}
+
+.xs-12 {
+    grid-column: auto / span 12;
+    font-size: 16px;
+}
+
+@media (width >= 768px) {
+    .sm-6 {
+        grid-column: auto / span 6;
+    }
+
+}
+
+@media (width >= 992px) {
+    .md-4 {
+        grid-column: auto / span 4;
+    }
+    .header-logo {
+    width: 50%;
+}
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.endpoint-section {
+    gap: 24px;
+    padding: 0 24px;
+}
+
+.endpoint-section--div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    
+    background-color: grey;
+    background-color: rgb(0, 30, 70);
+    gap: 24px;
+    padding: 24px 0;
+
+}
+
+.endpoint-section--header {
+    font-size: 32px;
+    color: #FFF;
+}
+
+.align-box {
+    display: flex;
+    justify-content: start;
+}
+
+.get-box {
+    background-color: white;
+    padding: 12px 24px;
+    width: 80%;
+    border-radius: 12px;
+}
+.get-box--p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.interface-box {
+    background-color: white;
+    padding: 12px 24px;
+    width: 50%;
+    height: 200px;
+    border-radius: 12px;
+    border: 2px solid black;
+}

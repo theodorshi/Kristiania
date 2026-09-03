@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/sportsworldlogoliten.png">
+    <title>SportsWorld-API</title>
+</head>
+<body>
+     <header>
+        <img class="header-logo" src="images/sportsworldlogo1.png" alt="Bildet av SportsWorld sin logo">
+        <h1>Velkommen til SportsWorld API</h1>
+     </header>
+     <main>
+        <h2 class="text-center">Tilgjengelige endepunkter</h2>
+        <section class="endpoint-section grid-12-column">
+            <!-- Athlete -->
+            <div class="endpoint-section--div xs-12 sm-6 md-4 lg-3 ">
+                <h3 class="endpoint-section--header">Athlete</h3>
+                <div class="interface-box">
+                    <p>Interface for athlete objekt:</p>
+                    <p>
+                        id: int, <br>
+                        name: string, <br>
+                        gender: string, <br>
+                        price: int, <br>
+                        image: string, <br>
+                        purchaseStatus: boolean
+                    </p>
+                </div>
+                
+                <div class="get-box">
+                    <p class="get-box--p">Få alle athleter: <a href="/api/athlete">GET /api/athlete</a></p>
+                    <p>Returnerer liste med alle athleter i databasen:</p>
+                        <p>
+                            [ <br>
+                            { <br>
+                                "id" : 1, <br>
+                                "name": "Lionel Messi", <br>
+                                "gender": "Mann", <br>
+                                "price": 100000, <br>
+                                "image": "messi.png", <br>
+                                "purchaseStatus": false <br>
+                            }, <br>
+                            { <br>
+                                "id" : 2, <br>
+                                "name": "Cristiano Ronaldo", <br>
+                                "gender": "Mann",<br> 
+                                "price": 90000, <br>
+                                "image": "ronaldo.png", <br>
+                                "purchaseStatus": false <br>
+                            }, <br>
+                              { <br>
+                                "id": 3, <br>
+                                "name": "Erling Braut Haaland", <br>
+                                "gender": "Mann", <br>
+                                "price": 200000, <br>
+                                "image": "haaland.png", <br>
+                                "purchaseStatus": false <br>
+                            } <br>
+                            ]<br>
+                        </p>
+                </div>
+                
+                <div class="get-box ">
+                    <p class="get-box--p">Hent athlet på id: <a href="/api/athlete/1">GET /api/athlete/{id}</a></p>
+                    <p>Returnerer objekt med athlet med gitt id:</p>
+                    <p>
+                         { <br>
+                                "id" : 1, <br>
+                                "name": "Lionel Messi", <br>
+                                "gender": "Mann", <br>
+                                "price": 100000, <br>
+                                "image": "messi.png", <br>
+                                "purchaseStatus": false <br>
+                         } <br>
+                    </p>
+                </div>
+
+                <div class="post-athlete get-box">
+                    <p class="get-box--p">Legg til athlete: POST /api/athlete</a> </p>
+                    <p>
+                        { <br>
+                            "id" : 9, <br>
+                            "name": "Martin Ødegaard", <br>
+                            "gender": "Mann", <br>
+                            "price": 200000, <br>
+                            "image": "ødegaard.jpg", <br>
+                            "purchaseStatus": false <br>
+                        }
+                    </p>
+                </div>
+
+                <div class="put-athlete get-box">
+                    <p class="get-box--p">Oppdater athlete: PUT /api/athlete</a> </p>
+                    <p>For å oppdatere må et nytt objekt sendes med og overskriver objektet med id</p>
+                    <p>
+                        { <br>
+                            "id" : 9, <br>
+                            "name": "Martin Ødegaard", <br>
+                            "gender": "Mann", <br>
+                            "price": 300000, <br>
+                            "image": "ødegaard.jpg", <br>
+                            "purchaseStatus": true <br>
+                        }
+                    </p>
+                </div>
+
+                <div class="delete-athlete get-box">
+                    <p class="get-box--p">Slett athlete: DELETE /api/athlete/id</p>
+                    <p>For å slette et objekt fra databasen må et athlete-objekt sendes med</p>
+                </div>
+
+            </div>
+          <!-- Venue -->
+            <div class="endpoint-section--div xs-12 sm-6 md-4 lg-3 ">
+                <h3 class="endpoint-section--header">Venue</h3>
+                <div class="interface-box">
+                    <p>Interface for venue objekt:</p>
+                    <p>
+                        id: int, <br>
+                        name: string, <br>
+                        capacity: int, <br>
+                        rentPrice: int, <br>
+                        description: string, <br>
+                        image: string
+                    </p>
+                </div>
+                <div class="get-box">
+                    <p class="get-box--p">Få alle venues: <a href="/api/venue">GET /api/venue</a> </p>
+                    <p>Returnerer array med alle venue-objekter</p>
+                    <p>
+                        [ <br>
+                        {
+                            "id": 1, <br>
+                            "name": "Ullevaal Stadion",<br>
+                            "capacity": 28000,<br>
+                            "rentPrice": 20000,<br>
+                            "description": "Ullevål Stadion er Norges nasjonalarena for fotball og ligger i Oslo. Den brukes av det norske herre- og kvinnelandslaget, samt til store konserter og arrangementer. Stadion har gjennomgått flere moderniseringer siden åpningen i 1926.",<br>
+                            "image": "ulleval.png"<br>
+                        },<br>
+                        {<br>
+                            "id": 2,<br>
+                            "name": "San Siro",<br>
+                            "capacity": 75817,<br>
+                            "rentPrice": 70000,<br>
+                            "description": "San Siro er en av verdens mest ikoniske fotballstadioner og ligger i Milano. Den deles av rivalene AC Milan og Inter Milan. Stadion er kjent for sin unike arkitektur med spiraltårn og en fantastisk atmosfære.",<br>
+                            "image": "sansiro.png"<br>
+                        },<br>
+                        {<br>
+                            "id": 3,<br>
+                            "name": "Santiago Bernabéu",<br>
+                            "capacity": 84000,<br>
+                            "rentPrice": 67000,<br>
+                            "description": "Santiago Bernabéu i Madrid er hjemmebanen til Real Madrid, en av verdens mest prestisjefylte klubber. Stadion åpnet i 1947 og har vært vert for flere Champions League-finaler og VM-kamper.",<br>
+                            "image": "santiagoBernabeu.png"<br>
+                        }<br>
+                        ]
+                    </p>
+                </div>
+
+                 <div class="get-box">
+                    <p class="get-box--p">Hent venue på id: <a href="/api/venue/1">GET /api/venue/{id}</a> </p>
+                    <p>Returnerer objekt med venue med en gitt id</p>
+                    <p>
+                        { <br>
+                            "id": 1, <br>
+                            "name": "Ullevål Stadion",<br>
+                            "capacity": 28000,<br>
+                            "rentPrice": 20000,<br>
+                            "description": "Ullevål Stadion er Norges nasjonalarena for fotball og ligger i Oslo. Den brukes av det norske herre- og kvinnelandslaget, samt til store konserter og arrangementer. Stadion har gjennomgått flere moderniseringer siden åpningen i 1926.",<br>
+                            "image": "ullevål.png"<br>
+                        }
+                    </p>
+                </div>
+
+                <div class="get-box">
+                    <p class="get-box--p">Legg til venue: POST /api/venue</a> </p>
+                    <p>
+                         { <br>
+                            "id": 9, <br>
+                            "name": "Allianz Arena",<br>
+                            "capacity": 100000,<br>
+                            "rentPrice": 80000,<br>
+                            "description": "Bayern Munchen sin hjemmebane for A-laget i fotball. Spilles også vm-kamper når Tyskland er arrangør.",<br>
+                            "image": "allianz.png"<br>
+                        }
+                    </p>
+                </div>
+
+                <div class="get-box">
+                    <p class="get-box--p">Slett venue: DELETE /api/venue/id</p>
+                </div>
+                    
+            </div>
+            <!-- Finance -->
+             <div class="endpoint-section--div xs-12 sm-6 md-4 lg-3 ">
+                <h3 class="endpoint-section--header">Finance</h3>
+                <div class="interface-box">
+                    <p>Interface for finance objekt:</p>
+                    <p>
+                        id: int, <br>
+                        moneyLeft: string, <br>
+                        numberOfPurchaes: int, <br>
+                        moneySpent: int
+                    </p>
+                </div>
+                <div class="get-box">
+                    <p class="get-box--p">Få finans data: <a href="/api/finance"> GET /api/finance</a> </p>
+                    <p>Returnerer finans objektet</p>
+                    <p>
+                        { <br>
+                            "id": 1, <br>
+                            "moneyLeft": 1000000, <br>
+                            "numberOfPurchaes": 2, <br>
+                            "moneySpent": 190000 <br>
+                        }
+                    </p>
+                </div>
+                 <div class="get-box">
+                    <p class="get-box--p">Oppdater finans: PUT /api/finance</a> </p>
+                    <p>
+                        { <br>
+                            "id": 1, <br>
+                            "moneyLeft": 2000000, <br>
+                            "numberOfPurchaes": 2, <br>
+                            "moneySpent": 190000 <br>
+                        }
+                    </p>
+                </div>
+            </div>
+        </section>
+
+     </main>
+
+     <footer>
+
+     </footer>
+</body>
+</html>

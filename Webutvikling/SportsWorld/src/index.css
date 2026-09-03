@@ -1,0 +1,221 @@
+@import 'tailwindcss';
+body {
+    @apply
+    bg-[rgb(248,243,242)]
+}
+
+/* PAGE  */
+.page {
+    @apply
+    mx-4
+}
+
+.page-h1 {
+    @apply
+    text-4xl
+    font-bold
+    text-center
+    py-4
+    md:text-6xl
+}
+
+
+/* TEXT */
+
+.text-medium {
+    @apply
+    text-2xl
+}
+.text-large {
+    @apply
+    text-3xl
+}
+.text-small {
+    @apply
+    text-xl
+}
+
+/* KNAPPER */
+.add-btn {
+    @apply
+    bg-green-500
+}
+
+.add-btn:hover{
+    @apply
+    bg-green-400
+}
+
+.remove-btn {
+    @apply
+    bg-red-500
+}
+
+.remove-btn:hover{
+    @apply
+    bg-red-400
+}
+
+.default-btn {
+    @apply
+    bg-[rgb(0,30,70)]
+}
+.default-btn:hover {
+    @apply
+    bg-[rgb(0,60,100)]
+}
+
+.button {
+    @apply
+    px-4
+    py-2
+    rounded
+    text-white
+    text-2xl 
+    font-bold
+    cursor-pointer
+}
+
+
+/* GRID */
+.item-grid {
+    @apply
+    col-span-12
+    md:col-span-6
+    lg:col-span-4
+    xl:col-span-3
+    p-4
+}
+
+.list-grid {
+    @apply
+    grid 
+    grid-cols-12
+    gap-4
+    md:px-4
+    lg:max-w-[1268px]
+    lg:mx-auto
+}
+
+.item {
+    @apply
+    flex 
+    flex-col
+    justify-center
+    items-center 
+    gap-3 
+    py-2 
+    bg-[rgb(219,234,254)] 
+    rounded 
+    shadow-md 
+}
+
+
+.image-responsive {
+    @apply
+    w-[400px]
+    md:w-[320px]
+    rounded-lg
+}
+
+/* FORM */
+
+.add-box {
+    @apply
+    flex
+    flex-col 
+    gap-1 
+    bg-orange-200
+    w-full
+    md:w-[80%]
+    xl:max-w-[60%]
+    mx-auto
+    rounded
+    shadow-md
+    justify-center 
+    items-center 
+    py-8
+}
+
+.add-box--header {
+    @apply
+    text-3xl
+    text-center 
+    font-bold
+}
+
+.add-box--form {
+    @apply
+    flex 
+    flex-col 
+    justify-center 
+    gap-2 
+    w-[80%]
+    px-4
+}
+
+.add-box--form__label{
+    @apply
+    text-2xl
+}
+.add-box--form__input{
+    @apply
+    border 
+    rounded 
+    px-4 
+    py-2
+    bg-white
+}
+
+/* FARGER */
+
+.box-color-dark{
+    @apply 
+    bg-[rgb(230,230,230)]
+    border
+    border-[rgb(242,242,242)]
+    rounded
+}
+.box-color{
+    @apply 
+    bg-[rgb(242,242,242)]
+    border
+    border-[rgb(242,242,242)]
+    rounded
+}
+.box-color-light{
+    @apply 
+    bg-blue-50
+    border
+    border-[rgb(242,242,242)]
+    rounded
+    shadow-md
+}
+
+.text-color{
+    @apply 
+    text-[rgb(13,13,13)]
+}
+.text-color-muted{
+    @apply 
+    text-[rgb(77,77,77)]
+}
+
+/* Farger */
+
+/* bg-[rgb(219,234,254)] */
+
+/*
+ Mørk blå
+0,30,70
+
+lys blå
+219,234,254
+
+orange
+255,214,168
+
+beige
+236,229,218
+*/
+
